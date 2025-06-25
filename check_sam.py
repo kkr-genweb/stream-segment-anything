@@ -5,8 +5,10 @@ import cv2
 from segment_anything import sam_model_registry, SamPredictor
 
 # Load model
-checkpoint_path = "sam_vit_h_4b8939.pth"
-sam = sam_model_registry["vit_h"](checkpoint=checkpoint_path).to("cuda" if torch.cuda.is_available() else "cpu")
+# checkpoint_path = "sam_vit_h_4b8939.pth" ## This is the biggest and slowest model
+checkpoint_path = "sam_vit_b_01ec64.pth" ## This is the base model that is faster
+#sam = sam_model_registry["vit_h"](checkpoint=checkpoint_path).to("cuda" if torch.cuda.is_available() else "cpu")
+sam = sam_model_registry["vit_b"](checkpoint=checkpoint_path).to("cuda" if torch.cuda.is_available() else "cpu")
 predictor = SamPredictor(sam)
 
 # Dummy image
