@@ -4,6 +4,8 @@ This project processes **.mov** dashcam video files from a specified directory, 
 
 Super slow when running on CPU. Needs GPU for closer to real time segmentation. This folder processes one jpg at a time in slow offline/batch mode.
 
+
+### WARNING: Have retained the streaming script for now, but really the batch mode is the only thing tested so far.
 ---
 
 ## Installation
@@ -40,13 +42,19 @@ If you need some sample videos, you can find a 50-video subset from the large bd
 
 To execute the project, use `uv run`:
 
+First use the frame extractor to reorient and convert a video into a folder of jpgs:
+
+```
+uv run extract_frames.py
+```
+
+The script below will run through the images one at a time and auto generate a mask and overlay it on the original image. Very very slowly!
+
 Bash
 
 ```
-uv run stream_segment_anything.py
+uv run check_sam_mask.py
 ```
-
-The script will go through each **.mov** file it finds, process it frame by frame, and display the original frame alongside its corresponding segmentation mask. You can press the **q** key at any time to quit the display for the current video and move to the next one.
 
 ---
 
