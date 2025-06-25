@@ -2,6 +2,8 @@
 
 This project processes **.mov** dashcam video files from a specified directory, extracts frames, and applies Facebook’s **Segment Anything Model (SAM)** to each. It then generates segmentation masks, displaying both the original frame and the generated mask in real-time.
 
+Super slow when running on CPU. Needs GPU for closer to real time segmentation. This folder processes one jpg at a time in slow offline/batch mode.
+
 ---
 
 ## Installation
@@ -22,7 +24,9 @@ uv sync
 
 To use SAM, you'll need to download a pre-trained model checkpoint. We recommend the **ViT-H checkpoint**.
 
-📥 **Download here:** [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)
+📥 **Download here:** 
+Large model: [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_4b8939.pth)
+Smaller base model: [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
 
 Place the downloaded **.pth** file in your project's root directory. The script is configured to look for this file by default.
 
