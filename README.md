@@ -27,8 +27,8 @@ uv sync
 To use SAM, you'll need to download a pre-trained model checkpoint. We recommend the **ViT-H checkpoint**.
 
 📥 **Download here:** 
-Large model: [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_4b8939.pth)
-Smaller base model: [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
+- Large model: [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_4b8939.pth)
+- Smaller base model: [https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
 
 Place the downloaded **.pth** file in your project's root directory. The script is configured to look for this file by default.
 
